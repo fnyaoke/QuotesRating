@@ -1,3 +1,54 @@
-<p>
-  quote works!
-</p>
+<div class="row">
+  <div class="row col-md-8">
+    <div *ngFor="let quote of quotes; let i = index" class="col-md-6">
+      <div class="card text-center">
+        <div class="card-header">Quote {{ quote.id }}</div>
+        <div class="card-body">
+          <h5 class="card-title">
+            
+            
+            {{ quote.text }}
+          </h5>
+
+          <div class="details-button">
+           
+            <i
+              *ngIf="!quote.showDetails"
+              class="fas fa-info-circle fa-2x"
+             
+            ></i>
+            <button
+              *ngIf="quote.showDetails"
+              class="btn btn-info"
+              
+            >
+              Hide Details
+            </button>
+            
+          </div>
+         
+          <br />
+        </div>
+        <div class="card-footer text-muted">
+          <div class="days">
+            <small>
+               <strong>{{ quote.dateAdded }}</strong> 
+            </small>
+          </div>
+          <div class="like">
+            <i class="fas fa-heart" ></i>
+            {{ quote.upvote }}
+          </div>
+          <div class="dislike">
+            <i class="fas fa-thumbs-down"></i>
+            {{ quote.downvote }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <app-quote-form ></app-quote-form>
+  </div>
+</div>
+
