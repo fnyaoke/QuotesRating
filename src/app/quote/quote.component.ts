@@ -9,25 +9,29 @@ export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
     new Quote(
       1,
-      'Simplicity is the ultimate sohistication',
-      'Sophie',
-      'Frankline',
-      new Date(2020, 8, 23)
+      'The best and most beautiful thing in this world cannot be seen or even heard but must be felt with the heart',
+      'Hellen Keller',
+      'Wangari',
+      new Date(1997, 3, 30)
     ),
     new Quote(
       2,
-      'The way to get started is to quit talking and begin doing',
-      'Shitandi',
-      'Frankline',
-      new Date(2020, 7, 20)
+      'Dont settle for what life gives you, make life better and build somthing',
+      'Ashton Kutcher',
+      'Wangari',
+      new Date(2000, 8, 22)
     ),
-    new Quote(3, 'Love wins', 'Anne', 'Frankline', new Date(2020, 6, 23)),
+    new Quote(3, 
+      'Love wins', 
+      'Anne', 
+      'Wangari',
+       new Date(2020, 5, 6)),
     new Quote(
       4,
-      'Better your best',
-      'Mulama',
-      'Frankline',
-      new Date(2020, 5, 23)
+      'In the middle of difficulty lies opportunity',
+      'Albert Einstein',
+      'Wangari',
+      new Date(1905, 5, 2)
     ),
   ];
   addUpVote(index) {
@@ -56,7 +60,7 @@ export class QuoteComponent implements OnInit {
   delete(deleteThis: boolean, index: number) {
     if (deleteThis) {
       let confirmDelete = confirm(
-        'Are you sure you want to delete this quote?'
+        ' Hello!Are you sure you want to delete this quote?'
       );
       if (confirmDelete) {
         this.quotes.splice(index, 1);
