@@ -40,11 +40,11 @@
             </small>
           </div>
           <div class="like">
-            <i class="fas fa-heart" ></i>
+            <i class="fas fa-heart" (click)="addUpVote(i)"></i>
             {{ quote.upvote }}
           </div>
           <div class="dislike">
-            <i class="fas fa-thumbs-down"></i>
+            <i class="fas fa-thumbs-down"(click)="addDownVote(i)"></i>
             {{ quote.downvote }}
           </div>
         </div>

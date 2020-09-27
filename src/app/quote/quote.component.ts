@@ -30,6 +30,13 @@ export class QuoteComponent implements OnInit {
       new Date(2020, 5, 23)
     ),
   ];
+  addUpVote(index) {
+    this.quotes[index].upvote++;
+  }
+
+  addDownVote(index) {
+    this.quotes[index].downvote++;
+  }
   toggleDetails(index) {
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
   }
