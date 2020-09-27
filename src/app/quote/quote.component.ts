@@ -53,6 +53,16 @@ export class QuoteComponent implements OnInit {
       return new Quote(0, '', '', '', new Date());
     }
   }
+  delete(deleteThis: boolean, index: number) {
+    if (deleteThis) {
+      let confirmDelete = confirm(
+        'Are you sure you want to delete this quote?'
+      );
+      if (confirmDelete) {
+        this.quotes.splice(index, 1);
+      }
+    }
+  }
   constructor() { }
 
   ngOnInit() {

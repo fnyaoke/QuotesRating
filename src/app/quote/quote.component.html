@@ -2,41 +2,31 @@
   <div class="row col-md-8">
     <div *ngFor="let quote of quotes; let i = index" class="col-md-6">
       <div class="card text-center">
+        <div *ngIf="quote.upvote == getHighestUpVote().upvote && quote.upvote > 0" class="card-header" appHighlight>
+          Quote {{ quote.id }}</div>
         <div class="card-header">Quote {{ quote.id }}</div>
         <div class="card-body">
           <h5 class="card-title">
-            
-            
+
+
             {{ quote.text }}
           </h5>
 
           <div class="details-button">
-           
-            <i
-              *ngIf="!quote.showDetails"
-              class="fas fa-info-circle fa-2x"
-             (click)="toggleDetails(i)"
-            ></i>
-            <button
-              *ngIf="quote.showDetails"
-              class="btn btn-info"
-              (click)="toggleDetails(i)"
-            >
+
+            <i *ngIf="!quote.showDetails" class="fas fa-info-circle fa-2x" (click)="toggleDetails(i)"></i>
+            <button *ngIf="quote.showDetails" class="btn btn-info" (click)="toggleDetails(i)">
               Hide Details
             </button>
-            
+
           </div>
-          <app-quote-details
-          *ngIf="quote.showDetails"
-          [quote]="quote"
-          
-        ></app-quote-details>
+          <app-quote-details *ngIf="quote.showDetails" [quote]="quote"(deleteQuote)="delete($event,i)"></app-quote-details>
           <br />
         </div>
         <div class="card-footer text-muted">
           <div class="days">
             <small>
-               added <strong>{{ quote.dateAdded | dateCount }}</strong> days ago
+              added <strong>{{ quote.dateAdded | dateCount }}</strong> days ago
             </small>
           </div>
           <div class="like">
@@ -44,7 +34,7 @@
             {{ quote.upvote }}
           </div>
           <div class="dislike">
-            <i class="fas fa-thumbs-down"(click)="addDownVote(i)"></i>
+            <i class="fas fa-thumbs-down" (click)="addDownVote(i)"></i>
             {{ quote.downvote }}
           </div>
         </div>
@@ -52,7 +42,6 @@
     </div>
   </div>
   <div class="col-md-4">
-    <app-quote-form ></app-quote-form>
+    <app-quote-form></app-quote-form>
   </div>
 </div>
-

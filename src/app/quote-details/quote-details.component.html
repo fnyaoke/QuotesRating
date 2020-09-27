@@ -1,2 +1,7 @@
 <p><strong>Author: </strong>{{ quote.author }}</p>
 <p><strong>Submitted By:</strong> {{ quote.submitter }}</p>
+<div class="delete-button">
+  
+  <i class="fas fa-trash-alt fa-lg" (click)="deleteThisQuote(true)"></i>
+</div>
+
