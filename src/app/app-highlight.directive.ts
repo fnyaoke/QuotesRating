@@ -5,7 +5,7 @@ import { Directive, ElementRef, Input } from "@angular/core";
 })
 export class AppHighlightDirective {
   constructor(private el: ElementRef) {
-    this.highlight(this.highlightColor || this.defaultColor || "red");
+    this.highlight(this.highlightColor || this.defaultColor || "blue");
   }
   @Input() defaultColor: string;
   @Input("myHighlight") highlightColor: string;
