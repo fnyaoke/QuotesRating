@@ -2,9 +2,10 @@
   <div class="row col-md-8">
     <div *ngFor="let quote of quotes; let i = index" class="col-md-6">
       <div class="card text-center">
-        <div *ngIf="quote.upvote == getHighestUpVote().upvote && quote.upvote > 0" class="card-header" appHighlight>
+        <div *ngIf="quote.upvote == getHighestUpVote().upvote && quote.upvote > 0" class="card-header" appAppHighlight>
           Quote {{ quote.id }}</div>
-        <div class="card-header">Quote {{ quote.id }}</div>
+        <div *ngIf="quote.upvote != getHighestUpVote().upvote || quote.upvote==0" class="card-header">Quote
+          {{ quote.id }}</div>
         <div class="card-body">
           <h5 class="card-title">
 
@@ -20,7 +21,8 @@
             </button>
 
           </div>
-          <app-quote-details *ngIf="quote.showDetails" [quote]="quote"(deleteQuote)="delete($event,i)"></app-quote-details>
+          <app-quote-details *ngIf="quote.showDetails" [quote]="quote" (deleteQuote)="delete($event,i)">
+          </app-quote-details>
           <br />
         </div>
         <div class="card-footer text-muted">
