@@ -26,7 +26,11 @@
             </button>
             
           </div>
-         
+          <app-quote-details
+          *ngIf="quote.showDetails"
+          [quote]="quote"
+          
+        ></app-quote-details>
           <br />
         </div>
         <div class="card-footer text-muted">
