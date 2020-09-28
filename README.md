@@ -38,7 +38,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 2. In the terminal Navigate to the directory you want the project to reside in e.g (cd-/Desktop)
 3. use the ng new Quotes to create the angular files.
 4. cd Quotes and the open the project with a text editor eg visual studio
-# Behavior Driven Development
+# BDD
 | Behaviour | Input | Output |
 | ----------- | ----------- | ----------- |
 | Enter your Quote | Better your best|
@@ -54,6 +54,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 | Html | For the strucure and layout of web document |
 | Css| For styling and designing the website|
 | Bootsrap | For UI interface elements such as buttons and forms |
+
+# Figma Link
+
+- https://www.figma.com/file/LbRkz5jAQuOecHhkERpMgp/Untitled?node-id=1%3A4
+
 # Contact
 - Incase of any questions ,feedback or comment, kindly reach me via.
 Email

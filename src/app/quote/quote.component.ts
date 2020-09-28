@@ -22,7 +22,7 @@ export class QuoteComponent implements OnInit {
       new Date(2000, 8, 22)
     ),
     new Quote(3, 
-      'Love wins', 
+      'Life without loveis like a tree without blossoms or fruit', 
       'Anne', 
       'Wangari',
        new Date(2020, 5, 6)),
