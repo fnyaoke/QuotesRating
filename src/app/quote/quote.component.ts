@@ -9,28 +9,28 @@ export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
     new Quote(
       1,
-      'The best and most beautiful thing in this world cannot be seen or even heard but must be felt with the heart',
-      'Hellen Keller',
-      'Wangari',
-      new Date(1997, 3, 30)
+      'Trust in the Lord with all your heart, in all your ways acknowledge Him and he shall make your path straight',
+      'Bible',
+      'Christian',
+      new Date(1800, 3, 30)
     ),
     new Quote(
       2,
-      'Dont settle for what life gives you, make life better and build somthing',
-      'Ashton Kutcher',
-      'Wangari',
+      'In life the only thing that matters is kindness and compassion',
+      'Someone',
+      'Nyaoke',
       new Date(2000, 8, 22)
     ),
     new Quote(3, 
-      'Life without loveis like a tree without blossoms or fruit', 
-      'Anne', 
-      'Wangari',
+      'Life is what you make of it', 
+      'Flossie', 
+      'Wetu',
        new Date(2020, 5, 6)),
     new Quote(
       4,
       'In the middle of difficulty lies opportunity',
       'Albert Einstein',
-      'Wangari',
+      'Wetu',
       new Date(1905, 5, 2)
     ),
   ];
