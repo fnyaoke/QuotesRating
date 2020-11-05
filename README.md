@@ -1,6 +1,6 @@
 # Quotes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
 ## Development server
 
@@ -38,7 +38,7 @@ Florence Nyaoke
 
 ## First Method
 
-1. Go to github and create a new repository ie 'https://github.com/fnyaoke/quoterate.git'
+1. Go to github and create a new repository ie 'https://github.com/fnyaoke/QuotesRating.git'
 2. In the terminal Navigate to the directory you want the project to reside in e.g (cd-/Desktop)
 3. use the ng new Quotes to create the angular files.
 4. cd Quotes and the open the project with a text editor eg visual studio
